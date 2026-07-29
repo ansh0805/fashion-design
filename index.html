@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masti's Fashion · Focus on the Good · 美</title>
+    <!-- SEO Meta Tags for Google -->
+    <meta name="description" content="Masti's Fashion - Focus on the good. My art, my fashion. KINFOLK inspired aesthetic with 美 (beauty) at its core." />
+    <meta name="keywords" content="Masti's Fashion, fashion, art, clothing, KINFOLK, beauty, 美, focus on the good" />
+    <meta name="author" content="Masti Gadhethariya" />
+    <meta property="og:title" content="Masti's Fashion · Focus on the Good" />
+    <meta property="og:description" content="My art, my fashion. KINFOLK inspired aesthetic with 美 (beauty) at its core." />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts: Expressive & High-End -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+    <style>
+        /* ----- RESET & BASE : high-level, dark, artistic ----- */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #0c0a08;
+            font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            color: #ece4db;
+        }
+        
+        .masti-art {
+            max-width: 1440px;
+            width: 100%;
+            background: #11100e;
+            border-radius: 3rem;
+            box-shadow: 0 40px 80px -10px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 215, 175, 0.06);
+            overflow: hidden;
+            transition: 0.2s;
+        }
+        /* ----- NAVIGATION : Home / Gallery / About ----- */
+        
+        .nav-art {
+            padding: 1.5rem 3rem;
+            background: #11100e;
+            border-bottom: 1px solid #1f1a16;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .nav-art .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fcf6ef;
+            letter-spacing: 1px;
+        }
+        
+        .nav-art .logo span {
+            color: #dbb594;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: #b8a79a;
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.2s;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ffffff;
+            border-bottom-color: #dbb594;
+        }
+        
+        .nav-links a i {
+            margin-right: 6px;
+            color: #dbb594;
+        }
+        
+        .vercel-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #1a1613;
+            padding: 0.3rem 1.6rem;
+            border-radius: 60px;
+            border: 1px solid #2a231e;
+            color: #b8a79a;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            transition: 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .vercel-badge i {
+            color: #dbb594;
+            font-size: 1rem;
+        }
+        
+        .vercel-badge:hover {
+            background: #2a231e;
+            border-color: #dbb594;
+            color: #ffffff;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-art {
+                padding: 1rem 1.2rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                gap: 1.2rem;
+            }
+        }
+        /* ----- PAGES ----- */
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        /* ----- HERO : "focus on the good · 美" ----- */
+        
+        .hero-art {
+            position: relative;
+            min-height: 620px;
+            background: #1a1613;
+            display: flex;
+            align-items: center;
+            padding: 4rem 5rem;
+            isolation: isolate;
+            border-bottom: 2px solid rgba(230, 190, 150, 0.06);
+            overflow: hidden;
+        }
+        
+        .hero-art .hero-bg-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+            filter: brightness(0.5) saturate(0.8) contrast(1.1);
+            transition: 0.5s;
+            mix-blend-mode: overlay;
+        }
+        
+        .hero-art::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(150deg, rgba(10, 8, 6, 0.8) 20%, rgba(0, 0, 0, 0.3) 80%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .hero-content-art {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+        
+        .hero-text-art h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 6.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            color: #fcf6ef;
+            text-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-text-art h1 .highlight {
+            background: linear-gradient(135deg, #f7d9b0, #dbb594);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            padding-right: 0.2rem;
+        }
+        
+        .hero-text-art .sub-line {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #cfbaa8;
+            margin-top: 0.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            align-items: center;
+        }
+        
+        .hero-text-art .sub-line .badge-art {
+            background: rgba(255, 235, 215, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 215, 175, 0.08);
+            padding: 0.4rem 1.8rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            font-weight: 400;
+            color: #dccfc3;
+        }
+        
+        .hero-text-art .sub-line .badge-art i {
+            margin-right: 6px;
+            color: #dbb594;
+        }
+        
+        .google-badge-art {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 215, 175, 0.06);
+            padding: 0.4rem 1.6rem;
+            border-radius: 60px;
+            color: #cbb9aa;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        
+        .google-badge-art i {
+            color: #fbbc05;
+        }
+        /* ----- KINFOLK INSPIRED QUOTE ----- */
+        
+        .kinfolk-quote {
+            padding: 2.5rem 5rem 1.5rem;
+            background: #11100e;
+            border-bottom: 1px solid #1f1a16;
+            text-align: center;
+        }
+        
+        .kinfolk-quote .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            font-style: italic;
+            color: #ede3da;
+            letter-spacing: 8px;
+            line-height: 1.2;
+        }
+        
+        .kinfolk-quote .quote-text .kinfolk-highlight {
+            color: #dbb594;
+            font-weight: 600;
+            letter-spacing: 12px;
+        }
+        
+        .kinfolk-quote .beauty-chars {
+            font-size: 1.8rem;
+            letter-spacing: 12px;
+            color: #b5977f;
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 900px) {
+            .hero-art {
+                padding: 2.5rem 2rem;
+                min-height: 450px;
+            }
+            .hero-text-art h1 {
+                font-size: 4.5rem;
+            }
+            .kinfolk-quote {
+                padding: 2rem 2rem 1.5rem;
+            }
+            .kinfolk-quote .quote-text {
+                font-size: 2.2rem;
+                letter-spacing: 4px;
+            }
+        }
+        
+        @media (max-width: 550px) {
+            .hero-text-art h1 {
+                font-size: 3.2rem;
+            }
+            .hero-text-art .sub-line {
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+            }
+            .hero-art {
+                padding: 1.8rem 1.2rem;
+                min-height: 350px;
+            }
+            .kinfolk-quote .quote-text {
+                font-size: 1.6rem;
+                letter-spacing: 3px;
+            }
+            .kinfolk-quote .beauty-chars {
+                font-size: 1.2rem;
+                letter-spacing: 8px;
+            }
+        }
+        /* ----- GALLERY : fashion & art grid (high-level) ----- */
+        
+        .gallery-art {
+            padding: 3rem 4rem 2.5rem;
+            background: #11100e;
+        }
+        
+        .gallery-grid-art {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        @media (max-width: 900px) {
+            .gallery-grid-art {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery-art {
+                padding: 1.8rem 1.5rem 1.2rem;
+            }
+        }
+        
+        @media (max-width: 550px) {
+            .gallery-grid-art {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .gallery-item-art {
+            border-radius: 2rem;
+            overflow: hidden;
+            background: #1f1a16;
+            aspect-ratio: 3 / 4;
+            box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6);
+            transition: 0.3s ease;
+            border: 1px solid #2a231e;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .gallery-item-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s;
+        }
+        
+        .gallery-item-art:hover img {
+            transform: scale(1.04);
+            filter: brightness(1.1) contrast(1.05);
+        }
+        
+        .gallery-item-art .art-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1.2rem 1.5rem;
+            background: linear-gradient(transparent, rgba(10, 8, 6, 0.7) 70%);
+            color: #f0e6de;
+            opacity: 0;
+            transition: 0.3s;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        
+        .gallery-item-art:hover .art-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-item-art .art-overlay i {
+            margin-right: 8px;
+            color: #dbb594;
+        }
+        
+        .gallery-item-art .art-tag {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(6px);
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #dccfc3;
+            border: 1px solid rgba(255, 215, 175, 0.05);
+            opacity: 0;
+            transition: 0.3s;
+        }
+        
+        .gallery-item-art:hover .art-tag {
+            opacity: 1;
+        }
+        /* ----- ABOUT SECTION ----- */
+        
+        .about-section {
+            padding: 3rem 5rem 4rem;
+            background: #11100e;
+            border-bottom: 1px solid #1f1a16;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-grid .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 500;
+            color: #fcf6ef;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-grid .about-text h2 span {
+            color: #dbb594;
+        }
+        
+        .about-grid .about-text p {
+            color: #b8a79a;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .about-grid .about-image {
+            border-radius: 2rem;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: #1f1a16;
+            border: 1px solid #2a231e;
+        }
+        
+        .about-grid .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .about-section {
+                padding: 2rem 2rem 3rem;
+            }
+            .about-grid .about-text h2 {
+                font-size: 2.2rem;
+            }
+        }
+        /* ----- INFO PANEL : dark & artistic ----- */
+        
+        .info-art {
+            padding: 3rem 5rem 4rem;
+            background: #11100e;
+            border-top: 1px solid #1f1a16;
+        }
+        
+        .grid-2col-art {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        @media (max-width: 760px) {
+            .grid-2col-art {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .info-art {
+                padding: 1.8rem 1.5rem 2.5rem;
+            }
+        }
+        
+        .contact-art h3,
+        .social-art h3 {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+            color: #9a8878;
+            margin-bottom: 1.8rem;
+            border-bottom: 1px solid #2a231e;
+            padding-bottom: 0.6rem;
+            font-weight: 400;
+        }
+        
+        .contact-item-art {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #e8ddd4;
+            padding: 0.3rem 0;
+            transition: 0.15s;
+        }
+        
+        .contact-item-art i {
+            width: 2.2rem;
+            font-size: 1.3rem;
+            color: #cfb8a3;
+            text-align: center;
+        }
+        
+        .contact-item-art a {
+            text-decoration: none;
+            color: #e8ddd4;
+            font-weight: 400;
+            border-bottom: 1px solid transparent;
+            transition: 0.2s;
+        }
+        
+        .contact-item-art a:hover {
+            border-bottom-color: #cfb8a3;
+            color: #ffffff;
+        }
+        
+        .social-art-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .social-art-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #1f1a16;
+            width: 3.6rem;
+            height: 3.6rem;
+            border-radius: 60px;
+            color: #dfd0c2;
+            font-size: 1.6rem;
+            transition: all 0.2s ease;
+            border: 1px solid #2f2822;
+            text-decoration: none;
+        }
+        
+        .social-art-icons a:hover {
+            background: #dbb594;
+            color: #0f0d0b;
+            transform: translateY(-5px);
+            border-color: #dbb594;
+            box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.6);
+        }
+        
+        .footer-art {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #7f6e5d;
+            border-top: 1px solid #1f1a16;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.8rem 2.5rem;
+        }
+        
+        .footer-art span {
+            background: #1a1613;
+            padding: 0.2rem 1.6rem;
+            border-radius: 60px;
+            color: #cfc1b5;
+            border: 1px solid #2a231e;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-art i {
+            color: #b5977f;
+            margin: 0 0.2rem;
+        }
+        
+        .art-marker {
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: #9a8878;
+            background: #1a1613;
+            padding: 0.2rem 1.2rem;
+            border-radius: 30px;
+            border: 1px solid #2a231e;
+        }
+        
+        .art-marker i {
+            color: #dbb594;
+        }
+        /* ----- DEPLOYMENT & SEO INFO SECTION ----- */
+        
+        .deploy-info {
+            padding: 2rem 5rem 3rem;
+            background: #11100e;
+            border-top: 1px solid #1f1a16;
+        }
+        
+        .deploy-info h3 {
+            font-family: 'Playfair Display', serif;
+            color: #fcf6ef;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .deploy-info h3 span {
+            color: #dbb594;
+        }
+        
+        .deploy-info .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .deploy-info .step-card {
+            background: #1a1613;
+            border: 1px solid #2a231e;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            transition: 0.3s;
+        }
+        
+        .deploy-info .step-card:hover {
+            border-color: #dbb594;
+            transform: translateY(-4px);
+        }
+        
+        .deploy-info .step-card .step-num {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #dbb594;
+            font-family: 'Playfair Display', serif;
+            opacity: 0.5;
+        }
+        
+        .deploy-info .step-card h4 {
+            color: #fcf6ef;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        
+        .deploy-info .step-card p {
+            color: #b8a79a;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .deploy-info .step-card i {
+            color: #dbb594;
+            margin-right: 6px;
+        }
+        
+        @media (max-width: 700px) {
+            .deploy-info {
+                padding: 2rem 1.5rem;
+            }
+            .deploy-info .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="masti-art">
+
+        <!-- NAVIGATION -->
+        <div class="nav-art">
+            <div class="logo">Masti's <span>Fashion</span></div>
+            <div class="nav-links">
+                <a class="active" data-page="home"><i class="fas fa-home"></i> Home</a>
+                <a data-page="gallery"><i class="fas fa-images"></i> Gallery</a>
+                <a data-page="about"><i class="fas fa-info-circle"></i> About</a>
+                <a class="vercel-badge" href="https://vercel.com/new" target="_blank">
+                    <i class="fas fa-rocket"></i> Deploy on Vercel
+                </a>
+            </div>
+        </div>
+
+        <!-- ===== HOME PAGE ===== -->
+        <div id="page-home" class="page active">
+            <!-- HERO -->
+            <div class="hero-art">
+                <!-- YOUR IMAGE: focus on the good -->
+                <img class="hero-bg-img" src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1400&auto=format&fit=crop" alt="focus on the good" />
+                <div class="hero-content-art">
+                    <div class="hero-text-art">
+                        <h1><span class="highlight">Focus</span> on <br />the <span class="highlight">Good</span></h1>
+                        <div class="sub-line">
+                            <span class="badge-art"><i class="fas fa-feather-alt"></i> KINFOLK</span>
+                            <span class="badge-art"><i class="fas fa-star"></i> 美 美 美</span>
+                            <span class="google-badge-art" onclick="window.open('https://www.google.com/search?q=Masti%27s+Fashion', '_blank')">
+                                <i class="fab fa-google"></i> GOOGLE · MASTI'S FASHION
+                            </span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; align-items: flex-end;">
+                        <span class="vercel-badge" onclick="window.open('https://vercel.com/new','_blank')">
+                            <i class="fas fa-cloud-upload-alt"></i> Vercel ready
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KINFOLK QUOTE + 美 -->
+            <div class="kinfolk-quote">
+                <div class="quote-text">
+                    Focus <span class="kinfolk-highlight">on</span> the <span class="kinfolk-highlight">Good</span>
+                    <div style="font-size: 1.2rem; letter-spacing: 6px; color: #b5977f; margin-top: 0.5rem; font-style: normal;">
+                        <i class="fas fa-crown" style="color:#dbb594;"></i> KINFOLK
+                    </div>
+                </div>
+                <div class="beauty-chars">
+                    美 美 美 美 美 美 美 美 美 美 美
+                </div>
+            </div>
+
+            <!-- GALLERY PREVIEW (first 3 images) -->
+            <div class="gallery-art">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h2 style="font-family:'Playfair Display',serif; color:#fcf6ef; font-weight:300; letter-spacing:2px;">
+                        <i class="fas fa-camera" style="color:#dbb594;"></i> My Art · My Fashion
+                    </h2>
+                    <a style="color:#b8a79a; text-decoration:none; font-size:0.8rem; letter-spacing:2px; cursor:pointer;" data-page="gallery">
+                        view all <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="gallery-grid-art">
+                    <!-- YOUR IMAGES: Replace these with your own fashion images -->
+                    <div class="gallery-item-art">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&auto=format&fit=crop" alt="focus on the good" />
+                        <div class="art-overlay"><i class="fas fa-feather-alt"></i> focus on the good</div>
+                        <div class="art-tag"><i class="fas fa-crown"></i> KINFOLK</div>
+                    </div>
+                    <div class="gallery-item-art">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&auto=format&fit=crop" alt="美 beauty" />
+                        <div class="art-overlay"><i class="fas fa-star"></i> 美 · beauty</div>
+                        <div class="art-tag"><i class="fas fa-crown"></i> 美</div>
+                    </div>
+                    <div class="gallery-item-art">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop" alt="my fashion" />
+                        <div class="art-overlay"><i class="fas fa-paint-brush"></i> my art · my fashion</div>
+                        <div class="art-tag"><i class="fas fa-crown"></i> Masti</div>
+                    </div>
+                </div>
+                <div style="text-align: right; margin-top: 1rem; font-size: 0.7rem; color: #5f4f40; letter-spacing: 0.5px;">
+                    <i class="fas fa-image"></i> add your images · focus on the good · 美
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== GALLERY PAGE ===== -->
+        <div id="page-gallery" class="page">
+            <div class="gallery-art" style="padding-top: 3rem;">
+                <h2 style="font-family:'Playfair Display',serif; color:#fcf6ef; font-weight:300; letter-spacing:2px; margin-bottom: 2rem; text-align:center;">
+                    <i class="fas fa-images" style="color:#dbb594;"></i> My Art · My Fashion · 美
+                </h2>
+                <div class="gallery-grid-art">
+                    <!-- Full Gallery (6 images) - Replace with your own images -->
+                    <div class="gallery-item-art">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&auto=format&fit=crop" alt="focus on the good" />
+                        <div class="art-overlay"><i class="fas fa-feather-alt"></i> focus on the good</div>
+                        <div class="art-tag">KINFOLK</div>
+                    </div>
+                    <div class="gallery-item-art">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&auto=format&fit=crop" alt="美 beauty" />
+                        <div class="art-overlay"><i class="fas fa-star"></i> 美 · beauty</div>
+                        <div class="art-tag">美</div>
+                    </div>
+                    <div class="gallery-item-art">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop" alt="my fashion" />
+                        <div class="art-overlay"><i class="fas fa-paint-brush"></i> my art · my fashion</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&auto=format&fit=crop" alt="my vision" />
+                        <div class="art-overlay"><i class="fas fa-crown"></i> my vision · textile</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&auto=format&fit=crop" alt="my art" />
+                        <div class="art-overlay"><i class="fas fa-palette"></i> my art · my fashion</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&auto=format&fit=crop" alt="clothing art" />
+                        <div class="art-overlay"><i class="fas fa-feather-alt"></i> clothing · art · beauty</div>
+                        <div class="art-tag">美</div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 1.5rem; font-size: 0.7rem; color: #5f4f40; letter-spacing: 0.5px;">
+                    <i class="fas fa-image"></i> replace with your own images · focus on the good · 美
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ABOUT PAGE ===== -->
+        <div id="page-about" class="page">
+            <div class="about-section">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>About <span>Masti's</span> Fashion</h2>
+                        <p><i class="fas fa-quote-left" style="color:#dbb594; margin-right: 8px;"></i> <strong>Focus on the good.</strong> This is the philosophy that drives everything I create.</p>
+                        <p>My art is my fashion. Every stitch, every silhouette, every fabric tells a story of self-expression and beauty. Inspired by the KINFOLK aesthetic and the pursuit of <strong>美</strong> (beauty), my work celebrates the quiet moments
+                            of life.</p>
+                        <p style="margin-top: 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: #1a1613; padding: 0.3rem 1.5rem; border-radius: 60px; border: 1px solid #2a231e; font-size: 0.8rem;">
+                                <i class="fas fa-crown" style="color:#dbb594;"></i> Est. 2026
+                            </span>
+                            <span style="background: #1a1613; padding: 0.3rem 1.5rem; border-radius: 60px; border: 1px solid #2a231e; font-size: 0.8rem;">
+                                <i class="fas fa-feather-alt" style="color:#dbb594;"></i> KINFOLK
+                            </span>
+                            <span style="background: #1a1613; padding: 0.3rem 1.5rem; border-radius: 60px; border: 1px solid #2a231e; font-size: 0.8rem;">
+                                <i class="fas fa-star" style="color:#dbb594;"></i> 美 · beauty
+                            </span>
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <!-- YOUR IMAGE: focus on the good / 美 -->
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&auto=format&fit=crop" alt="focus on the good · 美" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== INFO PANEL : contact + social (shared across all pages) ===== -->
+        <div class="info-art">
+            <div class="grid-2col-art">
+                <!-- contact -->
+                <div class="contact-art">
+                    <h3><i class="fas fa-id-card" style="margin-right: 8px;"></i> connect · my world</h3>
+                    <div class="contact-item-art">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://instagram.com/masti_gadhethariya_28105" target="_blank"><strong>@masti_gadhethariya_28105</strong> <span style="color:#8f7b6b; font-size:0.85rem;">· insta id</span></a>
+                    </div>
+                    <div class="contact-item-art">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:mastigadhethariya@gmail.com">mastigadhethariya@gmail.com</a>
+                    </div>
+                    <div class="contact-item-art">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+919879409048">+91 98794 09048</a>
+                    </div>
+                    <div class="contact-item-art" style="opacity:0.4; font-size:0.85rem; margin-top:0.2rem;">
+                        <i class="fas fa-at"></i>
+                        <span>mail: mastigadhethariya@gmail.com</span>
+                    </div>
+                </div>
+
+                <!-- social -->
+                <div class="social-art">
+                    <h3><i class="fas fa-share-nodes" style="margin-right: 8px;"></i> social · my vibe</h3>
+                    <div class="social-art-icons">
+                        <a href="https://instagram.com/masti_gadhethariya_28105" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:mastigadhethariya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+919879409048" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Google" style="background:#2a231e;" onclick="window.open('https://www.google.com/search?q=Masti%27s+Fashion', '_blank')"><i class="fab fa-google"></i></a>
+                    </div>
+                    <div style="margin-top: 1.8rem; display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span style="background: #1a1613; padding: 0.2rem 1.4rem; border-radius: 60px; font-size: 0.75rem; color: #cfbfb2; border: 1px solid #2a231e;">
+                            <i class="fas fa-pen-fancy"></i> google · Masti's Fashion
+                        </span>
+                        <span style="background: #1a1613; padding: 0.2rem 1.4rem; border-radius: 60px; font-size: 0.75rem; color: #cfbfb2; border: 1px solid #2a231e;">
+                            <i class="fas fa-feather-alt"></i> focus on the good
+                        </span>
+                        <span style="background: #1a1613; padding: 0.2rem 1.4rem; border-radius: 60px; font-size: 0.75rem; color: #cfbfb2; border: 1px solid #2a231e;">
+                            <i class="fas fa-star"></i> 美 · beauty
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="footer-art">
+                <span><i class="fas fa-crown"></i> Masti's Fashion</span>
+                <span><i class="fas fa-feather-alt"></i> focus on the good</span>
+                <span><i class="fas fa-star"></i> 美 · beauty</span>
+                <span><i class="fas fa-cloud-upload-alt"></i> Vercel ready</span>
+                <span class="vercel-badge" onclick="window.open('https://vercel.com/new','_blank')">
+                    <i class="fas fa-rocket"></i> Deploy now
+                </span>
+            </div>
+        </div>
+
+        <!-- ===== DEPLOYMENT & SEO INFO SECTION ===== -->
+        <div class="deploy-info">
+            <h3>🚀 <span>Deploy</span> on Vercel & <span>Google</span> Search</h3>
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h4><i class="fab fa-github"></i> Push to GitHub</h4>
+                    <p>Create a GitHub repository and upload this <strong>index.html</strong> file. Make sure to commit and push it.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h4><i class="fas fa-cloud-upload-alt"></i> Import to Vercel</h4>
+                    <p>Go to <strong>vercel.com/new</strong>, import your GitHub repository. Vercel will auto-detect and deploy your site.</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #dbb594;">
+                        <i class="fas fa-link"></i> Your live URL: <strong>https://your-project.vercel.app</strong>
+                    </p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h4><i class="fab fa-google"></i> Google Search Setup</h4>
+                    <p>Once live, submit your site to Google Search Console. Add your Vercel URL and request indexing.</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #b8a79a;">
+                        <i class="fas fa-search"></i> Users can search <strong>"Masti's Fashion"</strong> on Google to find you.
+                    </p>
+                </div>
+            </div>
+            <div style="margin-top: 1.5rem; text-align: center; padding: 1rem; background: #1a1613; border-radius: 1.5rem; border: 1px solid #2a231e;">
+                <p style="color: #b8a79a; font-size: 0.9rem;">
+                    <i class="fas fa-check-circle" style="color: #dbb594;"></i>
+                    <strong>SEO Ready:</strong> Meta tags, description, and keywords are already included for Google to find "Masti's Fashion".
+                </p>
+                <p style="color: #7f6e5d; font-size: 0.8rem; margin-top: 0.3rem;">
+                    <i class="fas fa-clock"></i> Allow 24-48 hours for Google to index your site after submission.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript : page navigation + interactions -->
+    <script>
+        (function() {
+            console.log('🌸 MASTI\'S FASHION · FOCUS ON THE GOOD · 美');
+            console.log('📸 Replace images with your own art/clothing photos.');
+            console.log('🔗 Instagram: @masti_gadhethariya_28105 · mail: mastigadhethariya@gmail.com');
+            console.log('📞 Phone: +91 98794 09048');
+            console.log('🚀 DEPLOY ON VERCEL:');
+            console.log('   1. Push this HTML to a GitHub repo');
+            console.log('   2. Import the repo to Vercel (vercel.com/new)');
+            console.log('   3. Your site will be live!');
+            console.log('🔍 GOOGLE SEARCH: After deployment, submit to Google Search Console.');
+            console.log('   Users can search "Masti\'s Fashion" to find your site.');
+
+            // ----- PAGE NAVIGATION -----
+            const navLinks = document.querySelectorAll('.nav-links a[data-page]');
+            const pages = {
+                home: document.getElementById('page-home'),
+                gallery: document.getElementById('page-gallery'),
+                about: document.getElementById('page-about')
+            };
+
+            // also handle "view all" link in home page
+            const viewAllLink = document.querySelector('[data-page="gallery"]');
+
+            function showPage(page) {
+                // hide all pages
+                Object.keys(pages).forEach(key => {
+                    pages[key].classList.remove('active');
+                    pages[key].style.display = 'none';
+                });
+
+                // show selected
+                if (pages[page]) {
+                    pages[page].classList.add('active');
+                    pages[page].style.display = 'block';
+                }
+
+                // update nav active state
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.page === page) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.dataset.page;
+                    showPage(page);
+                });
+            });
+
+            // "view all" in home page
+            if (viewAllLink) {
+                viewAllLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPage('gallery');
+                });
+            }
+
+            // ensure home is visible by default
+            showPage('home');
+
+            // ----- GALLERY INTERACTION -----
+            const items = document.querySelectorAll('.gallery-item-art');
+            items.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    const messages = [
+                        '✨ Focus on the good ✨',
+                        '✨ 美 · beauty · 美 ✨',
+                        '✨ My art · my fashion ✨',
+                        '✨ KINFOLK · my vision ✨',
+                        '✨ My art · my fashion · my truth ✨',
+                        '✨ Clothing · art · 美 ✨'
+                    ];
+                    alert(messages[index % messages.length]);
+                });
+            });
+
+            // ----- IMAGE ERROR FALLBACK -----
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', function() {
+                    this.alt = 'focus on the good · 美';
+                    this.style.opacity = '0.3';
+                });
+            });
+
+            // ----- GOOGLE BADGE: open Google search -----
+            const googleBadges = document.querySelectorAll('.google-badge-art, .social-art-icons a[aria-label="Google"]');
+            googleBadges.forEach(badge => {
+                if (!badge.getAttribute('onclick')) {
+                    badge.addEventListener('click', function() {
+                        window.open('https://www.google.com/search?q=Masti%27s+Fashion', '_blank');
+                    });
+                }
+            });
+
+            console.log('✅ All features ready! Instagram, email, phone links are functional.');
+            console.log('🔍 Google search will show "Masti\'s Fashion" once indexed.');
+        })();
+    </script>
+
+    <!-- 
+        ================================================================
+        ★  HOW TO ADD YOUR IMAGES  ★
+        1. Hero image:   <img class="hero-bg-img" src="YOUR_IMAGE_URL">
+        2. Gallery:      replace src in each .gallery-item-art img
+        3. About image:  <img src="YOUR_IMAGE_URL"> in .about-image
+        ================================================================
+        ★  UPDATED CONTACT DETAILS  ★
+        - Instagram: @masti_gadhethariya_28105 (click to open)
+        - Email: mastigadhethariya@gmail.com (click to compose)
+        - Phone: +91 98794 09048 (click to call)
+        - Google: click badge to search "Masti's Fashion"
+        ================================================================
+        ★  HOW TO DEPLOY ON VERCEL  ★
+        1. Create a GitHub repository and upload this file (index.html)
+        2. Go to vercel.com/new and import your repository
+        3. Vercel will automatically detect and deploy your site
+        4. Your live URL will be: https://your-project.vercel.app
+        ================================================================
+        ★  HOW TO APPEAR ON GOOGLE  ★
+        1. After deployment, go to Google Search Console
+        2. Add your Vercel URL as a property
+        3. Submit your sitemap or request indexing
+        4. Users can search "Masti's Fashion" to find your site
+        5. SEO meta tags are already included in the <head>
+    -->
+</body>
+
+</html>
