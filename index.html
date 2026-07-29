@@ -5,23 +5,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Masti's Fashion · Focus on the Good · 美</title>
-    <!-- SEO Meta Tags for Google -->
-    <meta name="description" content="Masti's Fashion - Focus on the good. My art, my fashion. KINFOLK inspired aesthetic with 美 (beauty) at its core." />
-    <meta name="keywords" content="Masti's Fashion, fashion, art, clothing, KINFOLK, beauty, 美, focus on the good" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Masti's Fashion - Focus on the good. My art, my fashion. Beauty at its core." />
+    <meta name="keywords" content="Masti's Fashion, fashion, art, clothing, beauty, 美, focus on the good, masti gadhethariya" />
     <meta name="author" content="Masti Gadhethariya" />
-    <meta property="og:title" content="Masti's Fashion · Focus on the Good" />
-    <meta property="og:description" content="My art, my fashion. KINFOLK inspired aesthetic with 美 (beauty) at its core." />
-    <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
-    <!-- Font Awesome 6 (free) -->
+    <meta property="og:title" content="Masti's Fashion · Focus on the Good" />
+    <meta property="og:description" content="My art, my fashion. Beauty at its core." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fashion-design.vercel.app/" />
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <!-- Google Fonts: Expressive & High-End -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
     <style>
-        /* ----- RESET & BASE : high-level, dark, artistic ----- */
-        
         * {
             margin: 0;
             padding: 0;
@@ -30,7 +30,7 @@
         
         body {
             background: #0c0a08;
-            font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -44,11 +44,10 @@
             width: 100%;
             background: #11100e;
             border-radius: 3rem;
-            box-shadow: 0 40px 80px -10px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 215, 175, 0.06);
+            box-shadow: 0 40px 80px -10px rgba(0, 0, 0, 0.9);
             overflow: hidden;
-            transition: 0.2s;
         }
-        /* ----- NAVIGATION : Home / Gallery / About ----- */
+        /* Navigation */
         
         .nav-art {
             padding: 1.5rem 3rem;
@@ -103,33 +102,6 @@
             color: #dbb594;
         }
         
-        .vercel-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #1a1613;
-            padding: 0.3rem 1.6rem;
-            border-radius: 60px;
-            border: 1px solid #2a231e;
-            color: #b8a79a;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            transition: 0.2s;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        
-        .vercel-badge i {
-            color: #dbb594;
-            font-size: 1rem;
-        }
-        
-        .vercel-badge:hover {
-            background: #2a231e;
-            border-color: #dbb594;
-            color: #ffffff;
-        }
-        
         @media (max-width: 600px) {
             .nav-art {
                 padding: 1rem 1.2rem;
@@ -140,7 +112,7 @@
                 gap: 1.2rem;
             }
         }
-        /* ----- PAGES ----- */
+        /* Pages */
         
         .page {
             display: none;
@@ -149,7 +121,7 @@
         .page.active {
             display: block;
         }
-        /* ----- HERO : "focus on the good · 美" ----- */
+        /* Hero */
         
         .hero-art {
             position: relative;
@@ -171,7 +143,6 @@
             object-fit: cover;
             opacity: 0.3;
             filter: brightness(0.5) saturate(0.8) contrast(1.1);
-            transition: 0.5s;
             mix-blend-mode: overlay;
         }
         
@@ -243,35 +214,16 @@
             margin-right: 6px;
             color: #dbb594;
         }
+        /* Quote Section */
         
-        .google-badge-art {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 215, 175, 0.06);
-            padding: 0.4rem 1.6rem;
-            border-radius: 60px;
-            color: #cbb9aa;
-            font-size: 0.8rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            letter-spacing: 1px;
-            cursor: pointer;
-        }
-        
-        .google-badge-art i {
-            color: #fbbc05;
-        }
-        /* ----- KINFOLK INSPIRED QUOTE ----- */
-        
-        .kinfolk-quote {
+        .quote-section {
             padding: 2.5rem 5rem 1.5rem;
             background: #11100e;
             border-bottom: 1px solid #1f1a16;
             text-align: center;
         }
         
-        .kinfolk-quote .quote-text {
+        .quote-section .quote-text {
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
             font-weight: 300;
@@ -281,13 +233,13 @@
             line-height: 1.2;
         }
         
-        .kinfolk-quote .quote-text .kinfolk-highlight {
+        .quote-section .quote-text .highlight-text {
             color: #dbb594;
             font-weight: 600;
             letter-spacing: 12px;
         }
         
-        .kinfolk-quote .beauty-chars {
+        .quote-section .beauty-chars {
             font-size: 1.8rem;
             letter-spacing: 12px;
             color: #b5977f;
@@ -302,10 +254,10 @@
             .hero-text-art h1 {
                 font-size: 4.5rem;
             }
-            .kinfolk-quote {
+            .quote-section {
                 padding: 2rem 2rem 1.5rem;
             }
-            .kinfolk-quote .quote-text {
+            .quote-section .quote-text {
                 font-size: 2.2rem;
                 letter-spacing: 4px;
             }
@@ -315,24 +267,19 @@
             .hero-text-art h1 {
                 font-size: 3.2rem;
             }
-            .hero-text-art .sub-line {
-                font-size: 0.8rem;
-                letter-spacing: 2px;
-            }
             .hero-art {
                 padding: 1.8rem 1.2rem;
                 min-height: 350px;
             }
-            .kinfolk-quote .quote-text {
+            .quote-section .quote-text {
                 font-size: 1.6rem;
-                letter-spacing: 3px;
             }
-            .kinfolk-quote .beauty-chars {
+            .quote-section .beauty-chars {
                 font-size: 1.2rem;
                 letter-spacing: 8px;
             }
         }
-        /* ----- GALLERY : fashion & art grid (high-level) ----- */
+        /* Gallery - Staggered Layout */
         
         .gallery-art {
             padding: 3rem 4rem 2.5rem;
@@ -342,7 +289,68 @@
         .gallery-grid-art {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 1.8rem;
+        }
+        /* Staggered layout - different aspect ratios */
+        
+        .gallery-item-art:nth-child(1) {
+            aspect-ratio: 3/4;
+        }
+        
+        .gallery-item-art:nth-child(2) {
+            aspect-ratio: 4/5;
+        }
+        
+        .gallery-item-art:nth-child(3) {
+            aspect-ratio: 2/3;
+        }
+        
+        .gallery-item-art:nth-child(4) {
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item-art:nth-child(5) {
+            aspect-ratio: 3/4;
+        }
+        
+        .gallery-item-art:nth-child(6) {
+            aspect-ratio: 5/4;
+        }
+        
+        .gallery-item-art:nth-child(7) {
+            aspect-ratio: 3/5;
+        }
+        
+        .gallery-item-art:nth-child(8) {
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item-art:nth-child(9) {
+            aspect-ratio: 3/4;
+        }
+        
+        .gallery-item-art:nth-child(10) {
+            aspect-ratio: 4/5;
+        }
+        
+        .gallery-item-art:nth-child(11) {
+            aspect-ratio: 2/3;
+        }
+        
+        .gallery-item-art:nth-child(12) {
+            aspect-ratio: 3/4;
+        }
+        
+        .gallery-item-art:nth-child(13) {
+            aspect-ratio: 5/4;
+        }
+        
+        .gallery-item-art:nth-child(14) {
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item-art:nth-child(15) {
+            aspect-ratio: 3/4;
         }
         
         @media (max-width: 900px) {
@@ -352,11 +360,17 @@
             .gallery-art {
                 padding: 1.8rem 1.5rem 1.2rem;
             }
+            .gallery-item-art:nth-child(n) {
+                aspect-ratio: 3/4;
+            }
         }
         
         @media (max-width: 550px) {
             .gallery-grid-art {
                 grid-template-columns: 1fr;
+            }
+            .gallery-item-art:nth-child(n) {
+                aspect-ratio: 4/5;
             }
         }
         
@@ -364,7 +378,6 @@
             border-radius: 2rem;
             overflow: hidden;
             background: #1f1a16;
-            aspect-ratio: 3 / 4;
             box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6);
             transition: 0.3s ease;
             border: 1px solid #2a231e;
@@ -429,10 +442,147 @@
         .gallery-item-art:hover .art-tag {
             opacity: 1;
         }
-        /* ----- ABOUT SECTION ----- */
+        /* ===== LIGHTBOX / FULL-SCREEN IMAGE VIEWER ===== */
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: 0.2s;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.5);
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .lightbox-close:hover {
+            transform: rotate(90deg);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: 0.2s;
+            background: rgba(0, 0, 0, 0.4);
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .lightbox-nav.prev {
+            left: 2rem;
+        }
+        
+        .lightbox-nav.next {
+            right: 2rem;
+        }
+        
+        .lightbox-counter {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.4rem 1.2rem;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        @media (max-width: 600px) {
+            .lightbox-nav {
+                width: 2.8rem;
+                height: 2.8rem;
+                font-size: 1.5rem;
+            }
+            .lightbox-nav.prev {
+                left: 0.5rem;
+            }
+            .lightbox-nav.next {
+                right: 0.5rem;
+            }
+            .lightbox-close {
+                top: 1rem;
+                right: 1rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
+            }
+            .lightbox-content img {
+                max-height: 80vh;
+            }
+        }
+        /* About - Expanded */
         
         .about-section {
-            padding: 3rem 5rem 4rem;
+            padding: 4rem 5rem 4.5rem;
             background: #11100e;
             border-bottom: 1px solid #1f1a16;
         }
@@ -446,7 +596,7 @@
         
         .about-grid .about-text h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 500;
             color: #fcf6ef;
             margin-bottom: 1.5rem;
@@ -461,6 +611,39 @@
             line-height: 1.8;
             font-size: 1.05rem;
             margin-bottom: 1.2rem;
+        }
+        
+        .about-grid .about-text .about-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .about-grid .about-text .about-details .detail-item {
+            background: #1a1613;
+            padding: 1rem 1.2rem;
+            border-radius: 1rem;
+            border: 1px solid #2a231e;
+            transition: 0.2s;
+        }
+        
+        .about-grid .about-text .about-details .detail-item:hover {
+            border-color: #dbb594;
+        }
+        
+        .about-grid .about-text .about-details .detail-item .label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #7f6e5d;
+        }
+        
+        .about-grid .about-text .about-details .detail-item .value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #fcf6ef;
+            margin-top: 0.2rem;
         }
         
         .about-grid .about-image {
@@ -488,8 +671,17 @@
             .about-grid .about-text h2 {
                 font-size: 2.2rem;
             }
+            .about-grid .about-text .about-details {
+                grid-template-columns: 1fr 1fr;
+            }
         }
-        /* ----- INFO PANEL : dark & artistic ----- */
+        
+        @media (max-width: 500px) {
+            .about-grid .about-text .about-details {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Contact */
         
         .info-art {
             padding: 3rem 5rem 4rem;
@@ -533,7 +725,6 @@
             font-size: 1.05rem;
             color: #e8ddd4;
             padding: 0.3rem 0;
-            transition: 0.15s;
         }
         
         .contact-item-art i {
@@ -611,93 +802,6 @@
         
         .footer-art i {
             color: #b5977f;
-            margin: 0 0.2rem;
-        }
-        
-        .art-marker {
-            font-size: 0.7rem;
-            letter-spacing: 3px;
-            color: #9a8878;
-            background: #1a1613;
-            padding: 0.2rem 1.2rem;
-            border-radius: 30px;
-            border: 1px solid #2a231e;
-        }
-        
-        .art-marker i {
-            color: #dbb594;
-        }
-        /* ----- DEPLOYMENT & SEO INFO SECTION ----- */
-        
-        .deploy-info {
-            padding: 2rem 5rem 3rem;
-            background: #11100e;
-            border-top: 1px solid #1f1a16;
-        }
-        
-        .deploy-info h3 {
-            font-family: 'Playfair Display', serif;
-            color: #fcf6ef;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-        
-        .deploy-info h3 span {
-            color: #dbb594;
-        }
-        
-        .deploy-info .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .deploy-info .step-card {
-            background: #1a1613;
-            border: 1px solid #2a231e;
-            border-radius: 1.5rem;
-            padding: 1.5rem;
-            transition: 0.3s;
-        }
-        
-        .deploy-info .step-card:hover {
-            border-color: #dbb594;
-            transform: translateY(-4px);
-        }
-        
-        .deploy-info .step-card .step-num {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #dbb594;
-            font-family: 'Playfair Display', serif;
-            opacity: 0.5;
-        }
-        
-        .deploy-info .step-card h4 {
-            color: #fcf6ef;
-            font-size: 1.1rem;
-            margin: 0.5rem 0;
-        }
-        
-        .deploy-info .step-card p {
-            color: #b8a79a;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        
-        .deploy-info .step-card i {
-            color: #dbb594;
-            margin-right: 6px;
-        }
-        
-        @media (max-width: 700px) {
-            .deploy-info {
-                padding: 2rem 1.5rem;
-            }
-            .deploy-info .steps {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -705,174 +809,211 @@
 <body>
     <div class="masti-art">
 
-        <!-- NAVIGATION -->
+        <!-- Navigation -->
         <div class="nav-art">
             <div class="logo">Masti's <span>Fashion</span></div>
             <div class="nav-links">
                 <a class="active" data-page="home"><i class="fas fa-home"></i> Home</a>
                 <a data-page="gallery"><i class="fas fa-images"></i> Gallery</a>
                 <a data-page="about"><i class="fas fa-info-circle"></i> About</a>
-                <a class="vercel-badge" href="https://vercel.com/new" target="_blank">
-                    <i class="fas fa-rocket"></i> Deploy on Vercel
-                </a>
             </div>
         </div>
 
-        <!-- ===== HOME PAGE ===== -->
+        <!-- HOME PAGE -->
         <div id="page-home" class="page active">
-            <!-- HERO -->
             <div class="hero-art">
-                <!-- YOUR IMAGE: focus on the good -->
-                <img class="hero-bg-img" src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1400&auto=format&fit=crop" alt="focus on the good" />
+                <img class="hero-bg-img" src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1400&auto=format&fit=crop" alt="Masti's Fashion - Focus on the Good" />
                 <div class="hero-content-art">
                     <div class="hero-text-art">
                         <h1><span class="highlight">Focus</span> on <br />the <span class="highlight">Good</span></h1>
                         <div class="sub-line">
-                            <span class="badge-art"><i class="fas fa-feather-alt"></i> KINFOLK</span>
-                            <span class="badge-art"><i class="fas fa-star"></i> 美 美 美</span>
-                            <span class="google-badge-art" onclick="window.open('https://www.google.com/search?q=Masti%27s+Fashion', '_blank')">
-                                <i class="fab fa-google"></i> GOOGLE · MASTI'S FASHION
-                            </span>
+                            <span class="badge-art"><i class="fas fa-feather-alt"></i> Masti's Fashion</span>
+                            <span class="badge-art"><i class="fas fa-star"></i> 美 · beauty</span>
                         </div>
                     </div>
-                    <div style="display: flex; gap: 0.5rem; align-items: flex-end;">
-                        <span class="vercel-badge" onclick="window.open('https://vercel.com/new','_blank')">
-                            <i class="fas fa-cloud-upload-alt"></i> Vercel ready
-                        </span>
-                    </div>
                 </div>
             </div>
 
-            <!-- KINFOLK QUOTE + 美 -->
-            <div class="kinfolk-quote">
+            <div class="quote-section">
                 <div class="quote-text">
-                    Focus <span class="kinfolk-highlight">on</span> the <span class="kinfolk-highlight">Good</span>
-                    <div style="font-size: 1.2rem; letter-spacing: 6px; color: #b5977f; margin-top: 0.5rem; font-style: normal;">
-                        <i class="fas fa-crown" style="color:#dbb594;"></i> KINFOLK
-                    </div>
+                    Focus <span class="highlight-text">on</span> the <span class="highlight-text">Good</span>
                 </div>
-                <div class="beauty-chars">
-                    美 美 美 美 美 美 美 美 美 美 美
-                </div>
+                <div class="beauty-chars">美 美 美 美 美 美 美 美 美 美 美</div>
             </div>
 
-            <!-- GALLERY PREVIEW (first 3 images) -->
+            <!-- Gallery Preview - First 3 images -->
             <div class="gallery-art">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                     <h2 style="font-family:'Playfair Display',serif; color:#fcf6ef; font-weight:300; letter-spacing:2px;">
                         <i class="fas fa-camera" style="color:#dbb594;"></i> My Art · My Fashion
                     </h2>
-                    <a style="color:#b8a79a; text-decoration:none; font-size:0.8rem; letter-spacing:2px; cursor:pointer;" data-page="gallery">
-                        view all <i class="fas fa-arrow-right"></i>
+                    <a style="color:#b8a79a; text-decoration:none; font-size:0.8rem; letter-spacing:2px; cursor:pointer;" onclick="showPage('gallery')">
+                        view all 15 <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 <div class="gallery-grid-art">
-                    <!-- YOUR IMAGES: Replace these with your own fashion images -->
-                    <div class="gallery-item-art">
-                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&auto=format&fit=crop" alt="focus on the good" />
+                    <div class="gallery-item-art" data-index="0">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&auto=format&fit=crop" alt="Masti's Fashion - Focus on the Good" />
                         <div class="art-overlay"><i class="fas fa-feather-alt"></i> focus on the good</div>
-                        <div class="art-tag"><i class="fas fa-crown"></i> KINFOLK</div>
+                        <div class="art-tag">Masti</div>
                     </div>
-                    <div class="gallery-item-art">
-                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&auto=format&fit=crop" alt="美 beauty" />
+                    <div class="gallery-item-art" data-index="1">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&auto=format&fit=crop" alt="Masti's Fashion - 美 beauty" />
                         <div class="art-overlay"><i class="fas fa-star"></i> 美 · beauty</div>
-                        <div class="art-tag"><i class="fas fa-crown"></i> 美</div>
+                        <div class="art-tag">Masti</div>
                     </div>
-                    <div class="gallery-item-art">
-                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop" alt="my fashion" />
+                    <div class="gallery-item-art" data-index="2">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop" alt="Masti's Fashion - My Art" />
                         <div class="art-overlay"><i class="fas fa-paint-brush"></i> my art · my fashion</div>
-                        <div class="art-tag"><i class="fas fa-crown"></i> Masti</div>
+                        <div class="art-tag">Masti</div>
                     </div>
-                </div>
-                <div style="text-align: right; margin-top: 1rem; font-size: 0.7rem; color: #5f4f40; letter-spacing: 0.5px;">
-                    <i class="fas fa-image"></i> add your images · focus on the good · 美
                 </div>
             </div>
         </div>
 
-        <!-- ===== GALLERY PAGE ===== -->
+        <!-- GALLERY PAGE - 15 Photos with Staggered Layout -->
         <div id="page-gallery" class="page">
             <div class="gallery-art" style="padding-top: 3rem;">
                 <h2 style="font-family:'Playfair Display',serif; color:#fcf6ef; font-weight:300; letter-spacing:2px; margin-bottom: 2rem; text-align:center;">
                     <i class="fas fa-images" style="color:#dbb594;"></i> My Art · My Fashion · 美
                 </h2>
                 <div class="gallery-grid-art">
-                    <!-- Full Gallery (6 images) - Replace with your own images -->
-                    <div class="gallery-item-art">
-                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&auto=format&fit=crop" alt="focus on the good" />
+                    <div class="gallery-item-art" data-index="0">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&auto=format&fit=crop" alt="Masti's Fashion - Focus on the Good" />
                         <div class="art-overlay"><i class="fas fa-feather-alt"></i> focus on the good</div>
-                        <div class="art-tag">KINFOLK</div>
+                        <div class="art-tag">Masti</div>
                     </div>
-                    <div class="gallery-item-art">
-                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&auto=format&fit=crop" alt="美 beauty" />
+                    <div class="gallery-item-art" data-index="1">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&auto=format&fit=crop" alt="Masti's Fashion - 美 beauty" />
                         <div class="art-overlay"><i class="fas fa-star"></i> 美 · beauty</div>
-                        <div class="art-tag">美</div>
+                        <div class="art-tag">Masti</div>
                     </div>
-                    <div class="gallery-item-art">
-                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop" alt="my fashion" />
+                    <div class="gallery-item-art" data-index="2">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop" alt="Masti's Fashion - My Art" />
                         <div class="art-overlay"><i class="fas fa-paint-brush"></i> my art · my fashion</div>
                         <div class="art-tag">Masti</div>
                     </div>
-                    <div class="gallery-item-art">
-                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&auto=format&fit=crop" alt="my vision" />
+                    <div class="gallery-item-art" data-index="3">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&auto=format&fit=crop" alt="Masti's Fashion - My Vision" />
                         <div class="art-overlay"><i class="fas fa-crown"></i> my vision · textile</div>
                         <div class="art-tag">Masti</div>
                     </div>
-                    <div class="gallery-item-art">
-                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&auto=format&fit=crop" alt="my art" />
+                    <div class="gallery-item-art" data-index="4">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&auto=format&fit=crop" alt="Masti's Fashion - My Art" />
                         <div class="art-overlay"><i class="fas fa-palette"></i> my art · my fashion</div>
                         <div class="art-tag">Masti</div>
                     </div>
-                    <div class="gallery-item-art">
-                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&auto=format&fit=crop" alt="clothing art" />
+                    <div class="gallery-item-art" data-index="5">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&auto=format&fit=crop" alt="Masti's Fashion - Clothing Art" />
                         <div class="art-overlay"><i class="fas fa-feather-alt"></i> clothing · art · beauty</div>
-                        <div class="art-tag">美</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art" data-index="6">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&auto=format&fit=crop" alt="Masti's Fashion - Style" />
+                        <div class="art-overlay"><i class="fas fa-crown"></i> style · elegance</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art" data-index="7">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop" alt="Masti's Fashion - Design" />
+                        <div class="art-overlay"><i class="fas fa-paint-brush"></i> design · creativity</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art" data-index="8">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&auto=format&fit=crop" alt="Masti's Fashion - Collection" />
+                        <div class="art-overlay"><i class="fas fa-star"></i> collection · 美</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art" data-index="9">
+                        <img src="https://images.unsplash.com/photo-1542060748-10c28b62716f?w=600&auto=format&fit=crop" alt="Masti's Fashion - Runway" />
+                        <div class="art-overlay"><i class="fas fa-crown"></i> runway · elegance</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art" data-index="10">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=600&auto=format&fit=crop" alt="Masti's Fashion - Street Style" />
+                        <div class="art-overlay"><i class="fas fa-city"></i> street · style</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art" data-index="11">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&auto=format&fit=crop" alt="Masti's Fashion - Texture" />
+                        <div class="art-overlay"><i class="fas fa-feather-alt"></i> texture · detail</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art" data-index="12">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&auto=format&fit=crop" alt="Masti's Fashion - Minimal" />
+                        <div class="art-overlay"><i class="fas fa-minus"></i> minimal · beauty</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art" data-index="13">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&auto=format&fit=crop" alt="Masti's Fashion - Editorial" />
+                        <div class="art-overlay"><i class="fas fa-camera"></i> editorial · fashion</div>
+                        <div class="art-tag">Masti</div>
+                    </div>
+                    <div class="gallery-item-art" data-index="14">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&auto=format&fit=crop" alt="Masti's Fashion - Signature" />
+                        <div class="art-overlay"><i class="fas fa-crown"></i> signature · style</div>
+                        <div class="art-tag">Masti</div>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 1.5rem; font-size: 0.7rem; color: #5f4f40; letter-spacing: 0.5px;">
-                    <i class="fas fa-image"></i> replace with your own images · focus on the good · 美
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a style="color:#b8a79a; text-decoration:none; font-size:0.8rem; letter-spacing:2px; cursor:pointer;" onclick="showPage('home')">
+                        <i class="fas fa-arrow-left"></i> Back to Home
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- ===== ABOUT PAGE ===== -->
+        <!-- ABOUT PAGE - Expanded -->
         <div id="page-about" class="page">
             <div class="about-section">
                 <div class="about-grid">
                     <div class="about-text">
                         <h2>About <span>Masti's</span> Fashion</h2>
                         <p><i class="fas fa-quote-left" style="color:#dbb594; margin-right: 8px;"></i> <strong>Focus on the good.</strong> This is the philosophy that drives everything I create.</p>
-                        <p>My art is my fashion. Every stitch, every silhouette, every fabric tells a story of self-expression and beauty. Inspired by the KINFOLK aesthetic and the pursuit of <strong>美</strong> (beauty), my work celebrates the quiet moments
-                            of life.</p>
-                        <p style="margin-top: 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
-                            <span style="background: #1a1613; padding: 0.3rem 1.5rem; border-radius: 60px; border: 1px solid #2a231e; font-size: 0.8rem;">
-                                <i class="fas fa-crown" style="color:#dbb594;"></i> Est. 2026
-                            </span>
-                            <span style="background: #1a1613; padding: 0.3rem 1.5rem; border-radius: 60px; border: 1px solid #2a231e; font-size: 0.8rem;">
-                                <i class="fas fa-feather-alt" style="color:#dbb594;"></i> KINFOLK
-                            </span>
-                            <span style="background: #1a1613; padding: 0.3rem 1.5rem; border-radius: 60px; border: 1px solid #2a231e; font-size: 0.8rem;">
-                                <i class="fas fa-star" style="color:#dbb594;"></i> 美 · beauty
-                            </span>
-                        </p>
+                        <p>My art is my fashion. Every stitch, every silhouette, every fabric tells a story of self-expression and beauty. My work celebrates the quiet moments of life and the beauty that surrounds us.</p>
+                        <p>From the streets to the runway, my designs are inspired by the raw, unfiltered beauty of everyday life. Each collection is a journey — a meditation on form, texture, and the timeless elegance of simplicity.</p>
+
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <div class="label"><i class="fas fa-crown" style="color:#dbb594;"></i> Founded</div>
+                                <div class="value">2026</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label"><i class="fas fa-globe" style="color:#dbb594;"></i> Philosophy</div>
+                                <div class="value">Focus on the Good</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label"><i class="fas fa-feather-alt" style="color:#dbb594;"></i> Aesthetic</div>
+                                <div class="value">Minimal · Elegant</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label"><i class="fas fa-star" style="color:#dbb594;"></i> Inspiration</div>
+                                <div class="value">美 · beauty</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label"><i class="fas fa-paint-brush" style="color:#dbb594;"></i> Medium</div>
+                                <div class="value">Textile · Art</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label"><i class="fas fa-heart" style="color:#dbb594;"></i> Mission</div>
+                                <div class="value">Celebrate Life</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="about-image">
-                        <!-- YOUR IMAGE: focus on the good / 美 -->
-                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&auto=format&fit=crop" alt="focus on the good · 美" />
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&auto=format&fit=crop" alt="Masti's Fashion - About" />
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ===== INFO PANEL : contact + social (shared across all pages) ===== -->
+        <!-- INFO PANEL -->
         <div class="info-art">
             <div class="grid-2col-art">
-                <!-- contact -->
                 <div class="contact-art">
-                    <h3><i class="fas fa-id-card" style="margin-right: 8px;"></i> connect · my world</h3>
+                    <h3><i class="fas fa-id-card"></i> connect · my world</h3>
                     <div class="contact-item-art">
                         <i class="fab fa-instagram"></i>
-                        <a href="https://instagram.com/masti_gadhethariya_28105" target="_blank"><strong>@masti_gadhethariya_28105</strong> <span style="color:#8f7b6b; font-size:0.85rem;">· insta id</span></a>
+                        <a href="https://instagram.com/masti_gadhethariya_28105" target="_blank"><strong>@masti_gadhethariya_28105</strong></a>
                     </div>
                     <div class="contact-item-art">
                         <i class="fas fa-envelope"></i>
@@ -882,224 +1023,212 @@
                         <i class="fas fa-phone-alt"></i>
                         <a href="tel:+919879409048">+91 98794 09048</a>
                     </div>
-                    <div class="contact-item-art" style="opacity:0.4; font-size:0.85rem; margin-top:0.2rem;">
-                        <i class="fas fa-at"></i>
-                        <span>mail: mastigadhethariya@gmail.com</span>
-                    </div>
                 </div>
-
-                <!-- social -->
                 <div class="social-art">
-                    <h3><i class="fas fa-share-nodes" style="margin-right: 8px;"></i> social · my vibe</h3>
+                    <h3><i class="fas fa-share-nodes"></i> social · my vibe</h3>
                     <div class="social-art-icons">
-                        <a href="https://instagram.com/masti_gadhethariya_28105" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:mastigadhethariya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+919879409048" aria-label="Phone"><i class="fas fa-phone"></i></a>
-                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="#" aria-label="Google" style="background:#2a231e;" onclick="window.open('https://www.google.com/search?q=Masti%27s+Fashion', '_blank')"><i class="fab fa-google"></i></a>
-                    </div>
-                    <div style="margin-top: 1.8rem; display: flex; flex-wrap: wrap; gap: 0.8rem;">
-                        <span style="background: #1a1613; padding: 0.2rem 1.4rem; border-radius: 60px; font-size: 0.75rem; color: #cfbfb2; border: 1px solid #2a231e;">
-                            <i class="fas fa-pen-fancy"></i> google · Masti's Fashion
-                        </span>
-                        <span style="background: #1a1613; padding: 0.2rem 1.4rem; border-radius: 60px; font-size: 0.75rem; color: #cfbfb2; border: 1px solid #2a231e;">
-                            <i class="fas fa-feather-alt"></i> focus on the good
-                        </span>
-                        <span style="background: #1a1613; padding: 0.2rem 1.4rem; border-radius: 60px; font-size: 0.75rem; color: #cfbfb2; border: 1px solid #2a231e;">
-                            <i class="fas fa-star"></i> 美 · beauty
-                        </span>
+                        <a href="https://instagram.com/masti_gadhethariya_28105" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:mastigadhethariya@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+919879409048"><i class="fas fa-phone"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
                     </div>
                 </div>
             </div>
-
-            <!-- footer -->
             <div class="footer-art">
                 <span><i class="fas fa-crown"></i> Masti's Fashion</span>
                 <span><i class="fas fa-feather-alt"></i> focus on the good</span>
                 <span><i class="fas fa-star"></i> 美 · beauty</span>
-                <span><i class="fas fa-cloud-upload-alt"></i> Vercel ready</span>
-                <span class="vercel-badge" onclick="window.open('https://vercel.com/new','_blank')">
-                    <i class="fas fa-rocket"></i> Deploy now
-                </span>
-            </div>
-        </div>
-
-        <!-- ===== DEPLOYMENT & SEO INFO SECTION ===== -->
-        <div class="deploy-info">
-            <h3>🚀 <span>Deploy</span> on Vercel & <span>Google</span> Search</h3>
-            <div class="steps">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h4><i class="fab fa-github"></i> Push to GitHub</h4>
-                    <p>Create a GitHub repository and upload this <strong>index.html</strong> file. Make sure to commit and push it.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h4><i class="fas fa-cloud-upload-alt"></i> Import to Vercel</h4>
-                    <p>Go to <strong>vercel.com/new</strong>, import your GitHub repository. Vercel will auto-detect and deploy your site.</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #dbb594;">
-                        <i class="fas fa-link"></i> Your live URL: <strong>https://your-project.vercel.app</strong>
-                    </p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h4><i class="fab fa-google"></i> Google Search Setup</h4>
-                    <p>Once live, submit your site to Google Search Console. Add your Vercel URL and request indexing.</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #b8a79a;">
-                        <i class="fas fa-search"></i> Users can search <strong>"Masti's Fashion"</strong> on Google to find you.
-                    </p>
-                </div>
-            </div>
-            <div style="margin-top: 1.5rem; text-align: center; padding: 1rem; background: #1a1613; border-radius: 1.5rem; border: 1px solid #2a231e;">
-                <p style="color: #b8a79a; font-size: 0.9rem;">
-                    <i class="fas fa-check-circle" style="color: #dbb594;"></i>
-                    <strong>SEO Ready:</strong> Meta tags, description, and keywords are already included for Google to find "Masti's Fashion".
-                </p>
-                <p style="color: #7f6e5d; font-size: 0.8rem; margin-top: 0.3rem;">
-                    <i class="fas fa-clock"></i> Allow 24-48 hours for Google to index your site after submission.
-                </p>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript : page navigation + interactions -->
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-close" id="lightboxClose">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="lightbox-nav prev" id="lightboxPrev">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="lightbox-nav next" id="lightboxNext">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Masti's Fashion" />
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter">1 / 15</div>
+    </div>
+
     <script>
-        (function() {
-            console.log('🌸 MASTI\'S FASHION · FOCUS ON THE GOOD · 美');
-            console.log('📸 Replace images with your own art/clothing photos.');
-            console.log('🔗 Instagram: @masti_gadhethariya_28105 · mail: mastigadhethariya@gmail.com');
-            console.log('📞 Phone: +91 98794 09048');
-            console.log('🚀 DEPLOY ON VERCEL:');
-            console.log('   1. Push this HTML to a GitHub repo');
-            console.log('   2. Import the repo to Vercel (vercel.com/new)');
-            console.log('   3. Your site will be live!');
-            console.log('🔍 GOOGLE SEARCH: After deployment, submit to Google Search Console.');
-            console.log('   Users can search "Masti\'s Fashion" to find your site.');
+        // ===== GALLERY DATA =====
+        const galleryImages = [{
+            src: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1200&auto=format&fit=crop',
+            alt: 'Focus on the Good'
+        }, {
+            src: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=1200&auto=format&fit=crop',
+            alt: '美 · beauty'
+        }, {
+            src: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1200&auto=format&fit=crop',
+            alt: 'My Art · My Fashion'
+        }, {
+            src: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&auto=format&fit=crop',
+            alt: 'My Vision · Textile'
+        }, {
+            src: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&auto=format&fit=crop',
+            alt: 'My Art · My Fashion'
+        }, {
+            src: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&auto=format&fit=crop',
+            alt: 'Clothing · Art · Beauty'
+        }, {
+            src: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&auto=format&fit=crop',
+            alt: 'Style · Elegance'
+        }, {
+            src: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&auto=format&fit=crop',
+            alt: 'Design · Creativity'
+        }, {
+            src: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200&auto=format&fit=crop',
+            alt: 'Collection · 美'
+        }, {
+            src: 'https://images.unsplash.com/photo-1542060748-10c28b62716f?w=1200&auto=format&fit=crop',
+            alt: 'Runway · Elegance'
+        }, {
+            src: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=1200&auto=format&fit=crop',
+            alt: 'Street · Style'
+        }, {
+            src: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1200&auto=format&fit=crop',
+            alt: 'Texture · Detail'
+        }, {
+            src: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&auto=format&fit=crop',
+            alt: 'Minimal · Beauty'
+        }, {
+            src: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&auto=format&fit=crop',
+            alt: 'Editorial · Fashion'
+        }, {
+            src: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1200&auto=format&fit=crop',
+            alt: 'Signature · Style'
+        }];
 
-            // ----- PAGE NAVIGATION -----
-            const navLinks = document.querySelectorAll('.nav-links a[data-page]');
-            const pages = {
-                home: document.getElementById('page-home'),
-                gallery: document.getElementById('page-gallery'),
-                about: document.getElementById('page-about')
-            };
+        let currentIndex = 0;
 
-            // also handle "view all" link in home page
-            const viewAllLink = document.querySelector('[data-page="gallery"]');
+        // ===== LIGHTBOX ELEMENTS =====
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        const closeBtn = document.getElementById('lightboxClose');
+        const prevBtn = document.getElementById('lightboxPrev');
+        const nextBtn = document.getElementById('lightboxNext');
 
-            function showPage(page) {
-                // hide all pages
-                Object.keys(pages).forEach(key => {
-                    pages[key].classList.remove('active');
-                    pages[key].style.display = 'none';
-                });
+        // ===== OPEN LIGHTBOX =====
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
 
-                // show selected
-                if (pages[page]) {
-                    pages[page].classList.add('active');
-                    pages[page].style.display = 'block';
+        // ===== UPDATE LIGHTBOX CONTENT =====
+        function updateLightbox() {
+            const img = galleryImages[currentIndex];
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxCounter.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+        }
+
+        // ===== CLOSE LIGHTBOX =====
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ===== NAVIGATION =====
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightbox();
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            updateLightbox();
+        }
+
+        // ===== EVENT LISTENERS =====
+        // Close button
+        closeBtn.addEventListener('click', closeLightbox);
+
+        // Navigation buttons
+        prevBtn.addEventListener('click', prevImage);
+        nextBtn.addEventListener('click', nextImage);
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'ArrowRight') nextImage();
+        });
+
+        // Click outside image to close
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // ===== ATTACH CLICK EVENTS TO ALL GALLERY ITEMS =====
+        document.querySelectorAll('.gallery-item-art').forEach((item) => {
+            item.addEventListener('click', function() {
+                const index = parseInt(this.dataset.index);
+                if (!isNaN(index) && index >= 0 && index < galleryImages.length) {
+                    openLightbox(index);
                 }
+            });
+        });
 
-                // update nav active state
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.dataset.page === page) {
-                        link.classList.add('active');
-                    }
-                });
+        // ===== PAGE NAVIGATION =====
+        const navLinks = document.querySelectorAll('.nav-links a[data-page]');
+        const pages = {
+            home: document.getElementById('page-home'),
+            gallery: document.getElementById('page-gallery'),
+            about: document.getElementById('page-about')
+        };
 
-                // scroll to top
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+        function showPage(page) {
+            Object.keys(pages).forEach(key => {
+                pages[key].classList.remove('active');
+                pages[key].style.display = 'none';
+            });
+            if (pages[page]) {
+                pages[page].classList.add('active');
+                pages[page].style.display = 'block';
             }
-
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const page = this.dataset.page;
-                    showPage(page);
-                });
+                link.classList.remove('active');
+                if (link.dataset.page === page) link.classList.add('active');
             });
-
-            // "view all" in home page
-            if (viewAllLink) {
-                viewAllLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    showPage('gallery');
-                });
-            }
-
-            // ensure home is visible by default
-            showPage('home');
-
-            // ----- GALLERY INTERACTION -----
-            const items = document.querySelectorAll('.gallery-item-art');
-            items.forEach((item, index) => {
-                item.addEventListener('click', function() {
-                    const messages = [
-                        '✨ Focus on the good ✨',
-                        '✨ 美 · beauty · 美 ✨',
-                        '✨ My art · my fashion ✨',
-                        '✨ KINFOLK · my vision ✨',
-                        '✨ My art · my fashion · my truth ✨',
-                        '✨ Clothing · art · 美 ✨'
-                    ];
-                    alert(messages[index % messages.length]);
-                });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
+        }
 
-            // ----- IMAGE ERROR FALLBACK -----
-            document.querySelectorAll('img').forEach(img => {
-                img.addEventListener('error', function() {
-                    this.alt = 'focus on the good · 美';
-                    this.style.opacity = '0.3';
-                });
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                showPage(this.dataset.page);
             });
+        });
 
-            // ----- GOOGLE BADGE: open Google search -----
-            const googleBadges = document.querySelectorAll('.google-badge-art, .social-art-icons a[aria-label="Google"]');
-            googleBadges.forEach(badge => {
-                if (!badge.getAttribute('onclick')) {
-                    badge.addEventListener('click', function() {
-                        window.open('https://www.google.com/search?q=Masti%27s+Fashion', '_blank');
-                    });
-                }
-            });
+        window.showPage = showPage;
 
-            console.log('✅ All features ready! Instagram, email, phone links are functional.');
-            console.log('🔍 Google search will show "Masti\'s Fashion" once indexed.');
-        })();
+        // ===== CONSOLE LOG =====
+        console.log('🌸 MASTI\'S FASHION · FOCUS ON THE GOOD · 美');
+        console.log('📸 15 Photos · Staggered Layout · Full-Screen Lightbox');
+        console.log('🔗 Instagram: @masti_gadhethariya_28105');
+        console.log('📧 Email: mastigadhethariya@gmail.com');
+        console.log('📞 Phone: +91 98794 09048');
+        console.log('💡 Click any gallery image to open full-screen viewer');
+        console.log('⌨️  Use arrow keys or click arrows to navigate');
     </script>
-
-    <!-- 
-        ================================================================
-        ★  HOW TO ADD YOUR IMAGES  ★
-        1. Hero image:   <img class="hero-bg-img" src="YOUR_IMAGE_URL">
-        2. Gallery:      replace src in each .gallery-item-art img
-        3. About image:  <img src="YOUR_IMAGE_URL"> in .about-image
-        ================================================================
-        ★  UPDATED CONTACT DETAILS  ★
-        - Instagram: @masti_gadhethariya_28105 (click to open)
-        - Email: mastigadhethariya@gmail.com (click to compose)
-        - Phone: +91 98794 09048 (click to call)
-        - Google: click badge to search "Masti's Fashion"
-        ================================================================
-        ★  HOW TO DEPLOY ON VERCEL  ★
-        1. Create a GitHub repository and upload this file (index.html)
-        2. Go to vercel.com/new and import your repository
-        3. Vercel will automatically detect and deploy your site
-        4. Your live URL will be: https://your-project.vercel.app
-        ================================================================
-        ★  HOW TO APPEAR ON GOOGLE  ★
-        1. After deployment, go to Google Search Console
-        2. Add your Vercel URL as a property
-        3. Submit your sitemap or request indexing
-        4. Users can search "Masti's Fashion" to find your site
-        5. SEO meta tags are already included in the <head>
-    -->
 </body>
 
 </html>
